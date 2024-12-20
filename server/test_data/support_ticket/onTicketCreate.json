@@ -35,7 +35,9 @@
       "spam": false,
       "source": 3,
       "tweet_id": null,
-      "cc_emails": [],
+      "cc_emails": [
+        "vijay.r@effy.co.in"
+      ],
       "to_emails": null,
       "created_at": "2021-11-05T12:45:13Z",
       "updated_at": "2021-11-05T12:45:13Z",

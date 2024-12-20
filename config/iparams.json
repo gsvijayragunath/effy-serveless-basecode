@@ -1,6 +1,6 @@
 {
     "domain": {
-      "display_name": "Freshdesk API Url",
+      "display_name": "Freshdesk Domain",
       "type": "text",
       "required": true
     },
