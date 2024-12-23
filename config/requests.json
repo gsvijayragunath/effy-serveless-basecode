@@ -5,7 +5,7 @@
       "host":"<%= iparam.domain %>",
       "path":"/api/v2/tickets",
       "headers": {
-        "Authorization": "Basic <%= encode(iparam.apikey) %>",
+        "Authorization": "Basic <%= encode(iparam.apiKey) %>",
         "Content-Type": "application/json"
       }
     }

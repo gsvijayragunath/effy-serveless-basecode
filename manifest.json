@@ -14,7 +14,7 @@
         "createFreshDeskTicket":{}
       }
     },
-    "service_ticket": {
+    "support_ticket": {
       "events": {
         "onTicketCreate": {
           "handler": "onTicketCreateHandler"

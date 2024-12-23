@@ -36,7 +36,7 @@
       "source": 3,
       "tweet_id": null,
       "cc_emails": [
-        "vijay.r@effy.co.in"
+        "gsvijayragunath@gmail.com"
       ],
       "to_emails": null,
       "created_at": "2021-11-05T12:45:13Z",
@@ -83,7 +83,7 @@
           "name": "event_date",
           "column": "gf_date_01",
           "label": "Event Date",
-          "value": "2024-12-19T00:00:00+01:00",
+          "value": "2024-12-20T00:00:00+01:00",
           "type": "date",
           "field_type": "custom_date",
           "id": 27000883606,

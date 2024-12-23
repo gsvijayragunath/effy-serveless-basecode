@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Installation Page</title>
+    <link rel="stylesheet" type="text/css" href="./assets/iparams.css" />
+    <script defer src="{{{appclient}}}"></script>
+  </head>
+
+  <body>
+    <div class="form">
+      <form>
+        <fw-input
+          id="domain"
+          label="FreshDesk Domain"
+          placeholder="Enter Your FreshDesk Domain"
+          required
+        ></fw-input>
+
+        <fw-input
+          id="apiKey"
+          type="text"
+          label="Email"
+          placeholder="apiKey"
+          required
+        ></fw-input>
+
+        <br/>
+
+        <fw-textarea
+          id="customFields"
+          label="custom_Fields"
+          placeholder="Enter CustomFields for mapping Data"
+          required
+        ></fw-textarea>
+      </form>
+    </div>
+
+    <script defer src="./assets/iparams.js"></script>
+  </body>
+  <script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.js"
+  ></script>
+</html>
