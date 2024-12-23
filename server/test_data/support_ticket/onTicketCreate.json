@@ -26,7 +26,7 @@
       "group_id": null,
       "product_id": null,
       "company_id": null,
-      "requester_id": 48014615863,
+      "requester_id": 27004638211,
       "responder_id": 48,
       "status": 2,
       "priority": 1,
@@ -42,12 +42,101 @@
       "created_at": "2021-11-05T12:45:13Z",
       "updated_at": "2021-11-05T12:45:13Z",
       "attachments": [],
-      "custom_fields": {
-        "cf_aefds_11010177632": null,
-        "cf_sda_11010177632": null,
-        "cf_check_test_11010177632": null,
-        "cf_pick_list_test_11010177632": null
-      },
+      "custom_fields": [
+        {
+          "name": "major_incident_type",
+          "column": "ffs_01",
+          "label": "Major incident type",
+          "value": null,
+          "type": "dropdown",
+          "field_type": "custom_dropdown",
+          "id": 27000877552
+        },
+        {
+          "name": "business_impact",
+          "column": "ff_text02",
+          "label": "Business impact",
+          "value": null,
+          "type": "paragraph",
+          "field_type": "custom_paragraph",
+          "id": 27000877553
+        },
+        {
+          "name": "impacted_locations",
+          "column": "ctf_04",
+          "label": "Impacted locations",
+          "value": null,
+          "type": "text",
+          "field_type": "custom_text",
+          "id": 27000877554
+        },
+        {
+          "name": "no_of_customers_impacted",
+          "column": "ctf_05",
+          "label": "No. of customers impacted",
+          "value": null,
+          "type": "text",
+          "field_type": "custom_text",
+          "id": 27000877555
+        },
+        {
+          "name": "event_date",
+          "column": "gf_date_01",
+          "label": "Event Date",
+          "value": "2024-12-19T00:00:00+01:00",
+          "type": "date",
+          "field_type": "custom_date",
+          "id": 27000883606,
+          "date_only": false
+        },
+        {
+          "name": "employeecontractor_name",
+          "column": "ctf_01",
+          "label": "Employee/Contractor Name",
+          "value": null,
+          "type": "text",
+          "field_type": "custom_text",
+          "id": 27000442390
+        },
+        {
+          "name": "date_and_time_of_reporting_incident",
+          "column": "ff_date01",
+          "label": "Date and Time of reporting incident",
+          "value": null,
+          "type": "date",
+          "field_type": "custom_date",
+          "id": 27000565951,
+          "date_only": false
+        },
+        {
+          "name": "date_and_time_of_resolution",
+          "column": "ff_date02",
+          "label": "Date and Time of resolution",
+          "value": null,
+          "type": "date",
+          "field_type": "custom_date",
+          "id": 27000565953,
+          "date_only": false
+        },
+        {
+          "name": "downtime",
+          "column": "ff_int01",
+          "label": "Downtime",
+          "value": null,
+          "type": "number",
+          "field_type": "custom_number",
+          "id": 27000569466
+        },
+        {
+          "name": "service_ticket_id",
+          "column": "ff_int01",
+          "label": "Service Ticket ID",
+          "value": 123455,
+          "type": "number",
+          "field_type": "custom_number",
+          "id": 27000569466
+        }
+      ],
       "account_id": 13,
       "sla_policy_id": 1000000403489,
       "resolution_escalation_level": null,
@@ -206,7 +295,7 @@
       "active": true
     },
     "requester": {
-      "id": 48014615863,
+      "id": 60005716709,
       "name": "Rachel",
       "email": "rachel@freshdesk.com",
       "mobile": null,

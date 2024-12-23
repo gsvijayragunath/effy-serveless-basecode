@@ -9,6 +9,11 @@
       "type": "text",
       "required": true,
       "secure":true
+    },
+    "custom_fields": {
+      "display_name": "Custom Fields",
+      "type": "text",
+      "required": true    
     }
   }
   
