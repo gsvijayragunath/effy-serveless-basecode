@@ -10,7 +10,7 @@
       <form>
         <fw-input
           id="domain"
-          label="FreshDesk Domain"
+          label="Freshdesk domain"
           placeholder="Enter Your FreshDesk Domain"
           required
         ></fw-input>
@@ -18,18 +18,20 @@
         <fw-input
           id="apiKey"
           type="text"
-          label="FreshDesk ApiKey"
-          placeholder="apiKey"
+          label="Freshdesk apikey"
+          placeholder="apikey"
           required
         ></fw-input>
 
-        <br/>
+        <br />
 
         <fw-textarea
           id="customFields"
-          label="custom_Fields"
-          placeholder="Enter CustomFields for mapping Data"
+          label="Fields"
+          placeholder="Enter fields for mapping"
           required
+          resize = "none"
+          style="--fw-textarea-min-height: 200px"
         ></fw-textarea>
       </form>
     </div>

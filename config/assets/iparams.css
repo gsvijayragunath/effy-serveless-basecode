@@ -16,3 +16,17 @@ html {
   height: 150px; /* Set the desired height */
   resize: none; /* Prevent resizing (optional) */
 }
+
+#w3review{
+  border-color: red;
+  height: 150px;
+  width:100%;
+  resize: none;
+}
+
+#customFields{
+  border-color: red;
+  height:200px;
+  width: auto;
+  resize: none;
+}
