@@ -1,32 +1,26 @@
 exports = {
   onTicketCreateHandler: async function (args) {
     try {
-      console.log("Ticket created by: " + args["data"]["requester"]["name"]);
-      console.log("Ticket Data:", args);
+      console.log(args.iparams)
 
-      const values = await $request.invokeTemplate("getTickets", {});
-      console.log("Data obtained from getTickets:", values);
-
-      const { subject, description_text, status, priority } = args.data.ticket;
-      const requesterEmail = args.data.requester.email;
-
+      const data = JSON.parse(args.iparams.fields);
+      const keys = Object.keys(data.common);
+      const commonValues = {};
+      for (let i = 0; i < keys.length; i++) {
+        commonValues[keys[i]] = args.data.ticket[keys[i]];
+      }
       const payload = {
-        email: requesterEmail,
-        subject: subject,
-        description: description_text,
-        status: status,
-        priority: priority,
+        email: args.data.requester.email,
+        ...commonValues,
+        custom_fields: customFields(args),
       };
-
-      console.log("Payload constructed:", payload);
-
+      console.log(payload)
       const jsonPayload = JSON.stringify(payload);
-      console.log("JSONPAYLOAD", jsonPayload);
+      console.log("JSON Payload:", jsonPayload);
 
       const result = await $request.invokeTemplate("createFreshDeskTicket", {
-        body: jsonPayload,
+        body:jsonPayload,
       });
-
       console.log("Ticket created successfully:", result);
     } catch (error) {
       console.error("Error during ticket creation:", error);
@@ -43,3 +37,30 @@ exports = {
     renderData();
   },
 };
+
+function customFields(args) {
+  const incomingFields = JSON.parse(args.iparams.fields);
+  const customFields = incomingFields.custom_fields;
+ 
+
+  const customFieldValues = {};
+  const serviceTicketKeys = Object.values(customFields);
+  const deskTicketKeys = Object.keys(customFields);
+  const data = args.data.ticket.custom_fields;
+
+  serviceTicketKeys.forEach((key, index) => {
+    const matchingItem = data.find((item) => item.name === key);
+    if (matchingItem) {
+      if (key === "event_date" && matchingItem.value) {
+        customFieldValues[deskTicketKeys[index]] = matchingItem.value.substring(0, 10);
+      } else if (key === "service_ticket_id" && matchingItem.value) {
+        customFieldValues[deskTicketKeys[index]] = String(matchingItem.value);
+      } else {
+        customFieldValues[deskTicketKeys[index]] = matchingItem.value;
+      }
+    }
+  });
+
+  console.log("Mapped Custom Fields:", customFieldValues);
+  return customFieldValues;
+}

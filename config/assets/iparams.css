@@ -1,0 +1,32 @@
+/* Border box declaration
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+/* inherit border-box on all elements in the universe and before and after
+   */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+#customFields {
+  width: 300px; /* Set the desired width */
+  height: 150px; /* Set the desired height */
+  resize: none; /* Prevent resizing (optional) */
+}
+
+#w3review{
+  border-color: red;
+  height: 150px;
+  width:100%;
+  resize: none;
+}
+
+#customFields{
+  border-color: red;
+  height:200px;
+  width: auto;
+  resize: none;
+}

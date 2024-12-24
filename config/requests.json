@@ -1,25 +1,11 @@
 {
-  "getTickets": {
-    "schema": {
-      "method": "GET",
-      "host": "<%= iparam.domain %>",
-      "path": "/api/v2/tickets",
-      "headers": {
-        "Authorization": "Basic <%= encode(iparam.apikey) %>",
-        "Content-Type": "application/json"
-      }
-    },
-    "options": {
-      "retryDelay": 1000
-    }
-  },
   "createFreshDeskTicket": {
     "schema": {
       "method":"POST",
       "host":"<%= iparam.domain %>",
       "path":"/api/v2/tickets",
       "headers": {
-        "Authorization": "Basic <%= encode(iparam.apikey) %>",
+        "Authorization": "Basic <%= encode(iparam.apiKey) %>",
         "Content-Type": "application/json"
       }
     }
