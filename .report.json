@@ -717,7 +717,7 @@
         "11": null,
         "12": null,
         "13": null,
-        "14": 0,
+        "14": 1,
         "15": null,
         "16": 0,
         "17": 0,
@@ -751,24 +751,24 @@
       },
       "b": {
         "0": [
-          null,
+          12,
           0
         ],
         "1": [
-          null,
-          null
+          6,
+          6
         ],
         "2": [
-          null,
-          null
+          12,
+          6
         ],
         "3": [
-          null,
+          6,
           0
         ],
         "4": [
-          null,
-          null
+          6,
+          6
         ]
       },
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
@@ -778,21 +778,21 @@
   "coverageSummary": {
     "lines": {
       "total": 35,
-      "covered": 29,
+      "covered": 1,
       "skipped": 0,
-      "pct": 82.85
+      "pct": 2.85
     },
     "statements": {
       "total": 37,
-      "covered": 31,
+      "covered": 1,
       "skipped": 0,
-      "pct": 83.78
+      "pct": 2.7
     },
     "functions": {
       "total": 6,
-      "covered": 4,
+      "covered": 0,
       "skipped": 0,
-      "pct": 66.66
+      "pct": 0
     },
     "branches": {
       "total": 10,
